@@ -11,5 +11,8 @@
 		"default_title": "a github plugin",
 		"default_popup": "popup.html"
 	},
-	"permissions" : ["tabs", "http://localhost/"]
+	"permissions" : ["tabs", "http://localhost/"],
+	"chrome_url_overrides": {
+		"newtab": "newtab.html"
+	}
 }
