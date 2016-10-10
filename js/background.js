@@ -16,6 +16,7 @@ function checkForValidUrl(tabId, changeInfo, tab) {
 	if(getDomainFromUrl(tab.url).toLowerCase()=="github.com"){
 		var now_repo = tab.url.split('/');
 		if (now_repo.length >= 5){
+			ret_data.error = "wait for a moment...";
 			chrome.pageAction.show(tabId);
 			$.ajax({
 				url: "http://localhost:3001/api/plugin/related?fullName="+now_repo[3]+"/"+now_repo[4],
@@ -32,8 +33,7 @@ function checkForValidUrl(tabId, changeInfo, tab) {
 			}).fail(function(jqXHR, textStatus) {
 				ret_data.error = 2;
 			});
-		}else
-			ret_data.error = 3;
+		}
 	}
 };
 
