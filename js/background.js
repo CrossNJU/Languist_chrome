@@ -26,10 +26,7 @@ function checkForValidUrl(tabId, changeInfo, tab) {
 				dataType: "json"
 			}).done(function(msg) {
 				ret_data = {};
-				ret_data.title = msg.length;
-				ret_data.author = msg[0].full_name;
-				ret_data.postDate = msg[1].full_name;
-				ret_data.firstAccess = msg[2].full_name;
+				ret_data.repos = msg;
 			}).fail(function(jqXHR, textStatus) {
 				ret_data.error = 2;
 			});
