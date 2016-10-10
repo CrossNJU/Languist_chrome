@@ -1,6 +1,6 @@
 ﻿{
 	"manifest_version": 2,
-	"name": "cnblogs.com article information",
+	"name": "github repo related",
 	"version": "0.0.1",
 	"background": { "scripts": ["/js/jquery-2.0.0.min.js", "/js/background.js"] },
 	"page_action": {
@@ -8,12 +8,8 @@
 			"19": "/img/cnblogs_19.png",
 			"38": "/img/cnblogs_38.png"
 		},
-		"default_title": "cnblogs.com article information", // shown in tooltip
+		"default_title": "a github plugin",
 		"default_popup": "popup.html"
 	},
-	"permissions" : ["tabs","http://localhost/"],
-	"content_scripts":[{
-		"matches":["http://www.cnblogs.com/*"],
-		"js":["/js/jquery-2.0.0.min.js", "/js/content_script.js"]
-	}]
+	"permissions" : ["tabs", "http://localhost/"]
 }

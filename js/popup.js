@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-	var data = chrome.extension.getBackgroundPage().articleData;
+	var data = chrome.extension.getBackgroundPage().ret_data;
 	if(data.error){
 		$("#message").text(data.error);
 		$("#content").hide();

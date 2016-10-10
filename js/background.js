@@ -1,4 +1,7 @@
-﻿function getDomainFromUrl(url){
+﻿var ret_data = {};
+ret_data.error = 1;
+
+function getDomainFromUrl(url){
 	var host = "null";
 	if(typeof url == "undefined" || null == url)
 		url = window.location.href;
@@ -10,35 +13,28 @@
 }
 
 function checkForValidUrl(tabId, changeInfo, tab) {
-	if(getDomainFromUrl(tab.url).toLowerCase()=="www.cnblogs.com"){
-		chrome.pageAction.show(tabId);
+	if(getDomainFromUrl(tab.url).toLowerCase()=="github.com"){
+		var now_repo = tab.url.split('/');
+		if (now_repo.length >= 5){
+			chrome.pageAction.show(tabId);
+			$.ajax({
+				url: "http://localhost:3001/api/plugin/related?fullName="+now_repo[3]+"/"+now_repo[4],
+				cache: false,
+				type: "GET",
+				//data: JSON.stringify({fullName: "facebook/react"}),
+				dataType: "json"
+			}).done(function(msg) {
+				ret_data = {};
+				ret_data.title = msg.length;
+				ret_data.author = msg[0].full_name;
+				ret_data.postDate = msg[1].full_name;
+				ret_data.firstAccess = msg[2].full_name;
+			}).fail(function(jqXHR, textStatus) {
+				ret_data.error = 2;
+			});
+		}else
+			ret_data.error = 3;
 	}
 };
 
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
-
-var articleData = {};
-articleData.error = "加载中...";
-chrome.runtime.onMessage.addListener(function(request, sender, sendRequest){
-	if(request.type!=="cnblog-article-information")
-		return;
-	articleData = request;
-	articleData.firstAccess = "获取中...";
-	if(!articleData.error){
-		$.ajax({
-			url: "http://localhost/first_access.php",
-			cache: false,
-			type: "POST",
-			data: JSON.stringify({url:articleData.url}),
-			dataType: "json"
-		}).done(function(msg) {
-			if(msg.error){
-				articleData.firstAccess = msg.error;
-			} else {
-				articleData.firstAccess = msg.firstAccess;
-			}
-		}).fail(function(jqXHR, textStatus) {
-			articleData.firstAccess = textStatus;
-		});
-	}
-});
