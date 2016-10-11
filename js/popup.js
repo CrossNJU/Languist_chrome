@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('wait');
     if(repo_data) {
       console.log(repo_data[0]);
+      $('.preloader').remove();
       $('#repo-item-tmpl').tmpl({
         data: repo_data
       }).appendTo('#repo-item-group');

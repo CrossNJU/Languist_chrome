@@ -76,6 +76,11 @@ p.subtitle a:focus {
   opacity: 0;
 }
 
+.preloader-wrapper {
+  display: block;
+  margin: 0 auto;
+}
+
 #title .card-title {
   line-height: 100%;
 }
@@ -137,4 +142,19 @@ p.subtitle a:focus {
 .chip-group {
   margin-top: 15px;
   margin-bottom: 0;
+}
+
+.star-chip {
+  background-color: #F2DF83;
+  float: right;
+  min-width: 75px;
+  line-height: 32px;
+  color: #fff;
+}
+
+.star-chip-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
 }

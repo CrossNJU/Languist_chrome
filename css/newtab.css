@@ -72,6 +72,7 @@ p.subtitle a:hover {
     opacity: 0;
 }
 
+
 .repo-item {
   display: inline-block;
   width: 47.5%;
@@ -154,4 +155,18 @@ p.subtitle a:hover {
 	margin-top: 15px;
 	margin-bottom: 0;
     height: 37px;
+}
+
+.star-chip {
+  background-color: #F2DF83;
+  float: right;
+  line-height: 32px;
+  color: #fff;
+}
+
+.star-chip-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
 }
