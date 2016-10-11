@@ -4,7 +4,8 @@ body {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background-color: #fafafa;
+  background-image: url('/img/bg-2.jpg');
+  background-size: cover;
 }
 
 p {
@@ -15,23 +16,60 @@ p {
 }
 
 .content {
-  position: absolute;
-  top: 50%; left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
-
-  margin: auto;
+  margin: 100px auto;
   width: 960px;
 }
 
 a.page-title {
+    transition: all 0.2s;
   display: block;
-  margin-bottom: 40px;
   text-align: center;
   font-size: 35px;
   font-weight: 200;
-  color: #74C2CE;
+  color: #fff;
+}
+
+a.page-title:hover {
+    transition: all 0.2s;
+    color: #F2DF83;
+}
+
+p.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #F4FEFF;
+    margin-bottom: 40px;
+}
+
+p.subtitle a {
+    transition: all 0.2s;
+    color: inherit;
+}
+
+p.subtitle a:hover {
+    transition: all 0.2s;
+    color: #F2DF83;
+}
+
+.card {
+    transition: all 0.2s;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transition: all 0.2s;
+    background-color: #F4FEFF;
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+
+.card-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
 }
 
 .repo-item {
@@ -41,7 +79,7 @@ a.page-title {
   vertical-align: top;
 }
 
-.repo-item:nth-child(even) {
+.repo-item:nth-child(odd) {
   margin-right: 3%;
 }
 
@@ -53,9 +91,7 @@ a.page-title {
 	color: #74C2CE;
 }
 
-.card {
-	margin-bottom: 20px;
-}
+
 
 .avatar {
 	float: left;
@@ -117,4 +153,5 @@ a.page-title {
 .chip-group {
 	margin-top: 15px;
 	margin-bottom: 0;
+    height: 37px;
 }

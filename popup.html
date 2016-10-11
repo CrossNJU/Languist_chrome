@@ -9,16 +9,17 @@
 		<link rel="stylesheet" type="text/css" href="/css/popup.css" />
 	</head>
 <body>
-	<div id="repo-item-group">
-		<div id='title' class="card">
-			<div class="card-content">
-				<p class="card-title">Related Repositories</p>
-			</div>
+	<nav>
+		<div class="nav-wrapper">
+			<p href="#" class="nav-title">Related Repositories</p>
+			<p class="subtitle">Supported by <a href="#">Languist</a></p>
 		</div>
-
+	</nav>
+	<div id="repo-item-group">
 		<script id="repo-item-tmpl" type="text/x-jquery-tmpl">
 		{{each(i,data) data}}
 		<div class="card repo-item">
+			<a class="card-link" target="_blank" href="https://github.com/${full_name}"></a>
 			<div class="card-content">
 				<div class="card-title row repo-title">
 					<img src="${avatarUrl}" alt="avatar" class="avatar">

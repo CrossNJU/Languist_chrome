@@ -1,7 +1,8 @@
 ﻿body {
+	position: relative;
 	width: 500px;
-	padding: 20px;
-}
+	padding: 80px 20px 20px;
+	background-color: #fafafa;}
 
 p {
 	margin: 0;
@@ -10,16 +11,72 @@ p {
 	word-break: normal;
 }
 
+nav {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+
+nav .nav-wrapper {
+	background-color:#74C2CE;
+	padding: 15px 20px;
+}
+
+.nav-title {
+	font-size: 25px;
+	font-weight: 200;
+}
+
+p.subtitle {
+	font-size: 14px;
+	color: #F4FEFF;
+}
+
+p.subtitle a {
+	transition: all 0.2s;
+	color: inherit;
+}
+
+p.subtitle a:hover {
+	transition: all 0.2s;
+	outline: hidden;
+}
+
+p.subtitle a:focus {
+	outline: hidden;
+}
+
+
+.card {
+	transition: all 0.2s;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.card:hover {
+	transition: all 0.2s;
+	background-color: #F4FEFF;
+	box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+
+.card-link {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+}
+
+
 #title .card-title {
 	line-height: 100%;
 }
 
 #title .card-title {
 	color: #74C2CE;
-}
-
-.card {
-	margin-bottom: 20px;
 }
 
 .avatar {
@@ -31,16 +88,28 @@ p {
 
 .user_info {
 	float: left;
-	margin-left: 10px
+	margin-left: 10px;
+	max-width:300px;
 }
 
 .card .card-content p.user_name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 100%;
+
 	font-size: 16px;
 	font-weight: bold;
 	color: #74C2CE;
+
 }
 
 .card .card-content p.update_info {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 100%;
+
 	font-size: 16px;
 	margin-top: 5px;
 	color: color(black lightness(+46.7%));
