@@ -5,32 +5,124 @@
     <title>
         Blacklist Checking
     </title>
-    <link rel="stylesheet" type="text/css" href="/css/popup.css" />
+    <link rel="stylesheet" href="/css/font-icons.css">
+		<link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="/css/newtab.css" />
 </head>
 <body>
-<p id="message">加载中...</p>
-<div id="content">
-    <table>
-        <tr>
-            <td class="item-name" style="width:30%">标题</td>
-            <td style="width:70%"><div id="content-title" class="content-div">&nbsp;</div></td>
-        </tr>
-        <tr>
-            <td class="item-name">作者</td>
-            <td><div id="content-author" class="content-div">&nbsp;</div></td>
-        </tr>
-        <tr>
-            <td class="item-name">日期</td>
-            <td><div id="content-date" class="content-div">&nbsp;</div></td>
-        </tr>
-        <tr>
-            <td class="item-name">首次访问</td>
-            <td><div id="content-first-access" class="content-div">&nbsp;</div></td>
-        </tr>
-    </table>
-</div>
+  <div class="repo-item-group">
+    <div class="card repo-item">
+      <div class="card-content">
+        <div class="card-title row repo-title">
+          <img src="${avatarUrl}" alt="avatar" class="avatar">
+          <div class="user_info">
+            <p class="user_name">${full_name}</p>
+            <p class="update_info">Updated on ${update}</p>
+          </div>
+          <a href="https://github.com/${full_name}" class="repo-link">
+            <i class="github-icon small muidocs-icon-custom-github"></i>
+          </a>
+        </div>
+        <p class="repo_intro">${description}</p>
+        <div class="chip-group row">
+        <div class="chip col 3">${tag}</div>
+        </div>
+      </div>
+    </div>
+    <div class="card repo-item">
+      <div class="card-content">
+        <div class="card-title row repo-title">
+          <img src="${avatarUrl}" alt="avatar" class="avatar">
+          <div class="user_info">
+            <p class="user_name">${full_name}</p>
+            <p class="update_info">Updated on ${update}</p>
+          </div>
+          <a href="https://github.com/${full_name}" class="repo-link">
+            <i class="github-icon small muidocs-icon-custom-github"></i>
+          </a>
+        </div>
+        <p class="repo_intro">${description}</p>
+        <div class="chip-group row">
+        <div class="chip col 3">${tag}</div>
+        </div>
+      </div>
+    </div>
+    <div class="card repo-item">
+      <div class="card-content">
+        <div class="card-title row repo-title">
+          <img src="${avatarUrl}" alt="avatar" class="avatar">
+          <div class="user_info">
+            <p class="user_name">${full_name}</p>
+            <p class="update_info">Updated on ${update}</p>
+          </div>
+          <a href="https://github.com/${full_name}" class="repo-link">
+            <i class="github-icon small muidocs-icon-custom-github"></i>
+          </a>
+        </div>
+        <p class="repo_intro">${description}</p>
+        <div class="chip-group row">
+        <div class="chip col 3">${tag}</div>
+        </div>
+      </div>
+    </div>
+    <div class="card repo-item">
+      <div class="card-content">
+        <div class="card-title row repo-title">
+          <img src="${avatarUrl}" alt="avatar" class="avatar">
+          <div class="user_info">
+            <p class="user_name">${full_name}</p>
+            <p class="update_info">Updated on ${update}</p>
+          </div>
+          <a href="https://github.com/${full_name}" class="repo-link">
+            <i class="github-icon small muidocs-icon-custom-github"></i>
+          </a>
+        </div>
+        <p class="repo_intro">${description}</p>
+        <div class="chip-group row">
+        <div class="chip col 3">${tag}</div>
+        </div>
+      </div>
+    </div>
+    <div class="card repo-item">
+      <div class="card-content">
+        <div class="card-title row repo-title">
+          <img src="${avatarUrl}" alt="avatar" class="avatar">
+          <div class="user_info">
+            <p class="user_name">${full_name}</p>
+            <p class="update_info">Updated on ${update}</p>
+          </div>
+          <a href="https://github.com/${full_name}" class="repo-link">
+            <i class="github-icon small muidocs-icon-custom-github"></i>
+          </a>
+        </div>
+        <p class="repo_intro">${description}</p>
+        <div class="chip-group row">
+        <div class="chip col 3">${tag}</div>
+        </div>
+      </div>
+    </div>
+    <div class="card repo-item">
+      <div class="card-content">
+        <div class="card-title row repo-title">
+          <img src="${avatarUrl}" alt="avatar" class="avatar">
+          <div class="user_info">
+            <p class="user_name">${full_name}</p>
+            <p class="update_info">Updated on ${update}</p>
+          </div>
+          <a href="https://github.com/${full_name}" class="repo-link">
+            <i class="github-icon small muidocs-icon-custom-github"></i>
+          </a>
+        </div>
+        <p class="repo_intro">${description}</p>
+        <div class="chip-group row">
+        <div class="chip col 3">${tag}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="/js/jquery-2.0.0.min.js"></script>
+<script src="/js/materialize.js"></script>
+<script src="/js/jquery.tmpl.js"></script>
 <script src="/js/newtab.js"></script>
 </html>
-
