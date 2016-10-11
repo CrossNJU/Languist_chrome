@@ -14,6 +14,8 @@ function getDomainFromUrl(url){
 
 function checkForValidUrl(tabId, changeInfo, tab) {
 	if(getDomainFromUrl(tab.url).toLowerCase()=="github.com"){
+		ret_data = {};
+		ret_data.error = 1;
 		var now_repo = tab.url.split('/');
 		if (now_repo.length >= 5){
 			ret_data.error = "wait for a moment...";
