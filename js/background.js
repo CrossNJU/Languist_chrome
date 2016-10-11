@@ -19,7 +19,7 @@ function checkForValidUrl(tabId, changeInfo, tab) {
 			ret_data.error = "wait for a moment...";
 			chrome.pageAction.show(tabId);
 			$.ajax({
-				url: "http://localhost:3001/api/plugin/related?fullName="+now_repo[3]+"/"+now_repo[4],
+				url: "http://gitmining.net:40004/api/plugin/related?fullName="+now_repo[3]+"/"+now_repo[4],
 				cache: false,
 				type: "GET",
 				dataType: "json"
