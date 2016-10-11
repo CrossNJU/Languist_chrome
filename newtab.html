@@ -10,116 +10,37 @@
     <link rel="stylesheet" type="text/css" href="/css/newtab.css" />
 </head>
 <body>
-  <div class="repo-item-group">
-    <div class="card repo-item">
-      <div class="card-content">
-        <div class="card-title row repo-title">
-          <img src="${avatarUrl}" alt="avatar" class="avatar">
-          <div class="user_info">
-            <p class="user_name">${full_name}</p>
-            <p class="update_info">Updated on ${update}</p>
+  <div class="content">
+    <a class="flow-text page-title">Awesome Repositories <span>Supported by Languist</span></a>
+    <ul class="repo-item-group" id="repo-item-group">
+    <script id="repo-item-tmpl" type="text/x-jquery-tmpl">
+    {{each(i,data) data}}
+      <li class="card repo-item">
+        <div class="card-content">
+          <div class="card-title row repo-title">
+            <img src="${avatarUrl}" alt="avatar" class="avatar">
+            <div class="user_info">
+              <p class="user_name">${full_name}</p>
+              <p class="update_info">Updated on ${update}</p>
+            </div>
+            <a href="https://github.com/${full_name}" class="repo-link">
+              <i class="github-icon small muidocs-icon-custom-github"></i>
+            </a>
           </div>
-          <a href="https://github.com/${full_name}" class="repo-link">
-            <i class="github-icon small muidocs-icon-custom-github"></i>
-          </a>
-        </div>
-        <p class="repo_intro">${description}</p>
-        <div class="chip-group row">
-        <div class="chip col 3">${tag}</div>
-        </div>
-      </div>
-    </div>
-    <div class="card repo-item">
-      <div class="card-content">
-        <div class="card-title row repo-title">
-          <img src="${avatarUrl}" alt="avatar" class="avatar">
-          <div class="user_info">
-            <p class="user_name">${full_name}</p>
-            <p class="update_info">Updated on ${update}</p>
+          <p class="repo_intro">${description}</p>
+          <div class="chip-group row">
+          {{each(i,tag) tags}}
+            <div class="chip col 3">${tag}</div>
+          {{/each}}
           </div>
-          <a href="https://github.com/${full_name}" class="repo-link">
-            <i class="github-icon small muidocs-icon-custom-github"></i>
-          </a>
         </div>
-        <p class="repo_intro">${description}</p>
-        <div class="chip-group row">
-        <div class="chip col 3">${tag}</div>
-        </div>
-      </div>
-    </div>
-    <div class="card repo-item">
-      <div class="card-content">
-        <div class="card-title row repo-title">
-          <img src="${avatarUrl}" alt="avatar" class="avatar">
-          <div class="user_info">
-            <p class="user_name">${full_name}</p>
-            <p class="update_info">Updated on ${update}</p>
-          </div>
-          <a href="https://github.com/${full_name}" class="repo-link">
-            <i class="github-icon small muidocs-icon-custom-github"></i>
-          </a>
-        </div>
-        <p class="repo_intro">${description}</p>
-        <div class="chip-group row">
-        <div class="chip col 3">${tag}</div>
-        </div>
-      </div>
-    </div>
-    <div class="card repo-item">
-      <div class="card-content">
-        <div class="card-title row repo-title">
-          <img src="${avatarUrl}" alt="avatar" class="avatar">
-          <div class="user_info">
-            <p class="user_name">${full_name}</p>
-            <p class="update_info">Updated on ${update}</p>
-          </div>
-          <a href="https://github.com/${full_name}" class="repo-link">
-            <i class="github-icon small muidocs-icon-custom-github"></i>
-          </a>
-        </div>
-        <p class="repo_intro">${description}</p>
-        <div class="chip-group row">
-        <div class="chip col 3">${tag}</div>
-        </div>
-      </div>
-    </div>
-    <div class="card repo-item">
-      <div class="card-content">
-        <div class="card-title row repo-title">
-          <img src="${avatarUrl}" alt="avatar" class="avatar">
-          <div class="user_info">
-            <p class="user_name">${full_name}</p>
-            <p class="update_info">Updated on ${update}</p>
-          </div>
-          <a href="https://github.com/${full_name}" class="repo-link">
-            <i class="github-icon small muidocs-icon-custom-github"></i>
-          </a>
-        </div>
-        <p class="repo_intro">${description}</p>
-        <div class="chip-group row">
-        <div class="chip col 3">${tag}</div>
-        </div>
-      </div>
-    </div>
-    <div class="card repo-item">
-      <div class="card-content">
-        <div class="card-title row repo-title">
-          <img src="${avatarUrl}" alt="avatar" class="avatar">
-          <div class="user_info">
-            <p class="user_name">${full_name}</p>
-            <p class="update_info">Updated on ${update}</p>
-          </div>
-          <a href="https://github.com/${full_name}" class="repo-link">
-            <i class="github-icon small muidocs-icon-custom-github"></i>
-          </a>
-        </div>
-        <p class="repo_intro">${description}</p>
-        <div class="chip-group row">
-        <div class="chip col 3">${tag}</div>
-        </div>
-      </div>
-    </div>
+      </li>
+    {{/each}}
+    </script>
+    </ul>
   </div>
+
+
 </body>
 <script src="/js/jquery-2.0.0.min.js"></script>
 <script src="/js/materialize.js"></script>

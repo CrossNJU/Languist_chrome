@@ -1,5 +1,10 @@
 body {
-	padding: 20px;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #fafafa;
 }
 
 p {
@@ -9,23 +14,35 @@ p {
 	word-break: normal;
 }
 
-.repo-item-group {
-  margin: auto;
+.content {
   position: absolute;
   top: 50%; left: 50%;
   -webkit-transform: translate(-50%,-50%);
       -ms-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
+
+  margin: auto;
   width: 960px;
+}
+
+a.page-title {
+  display: block;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 200;
+  color: #74C2CE;
 }
 
 .repo-item {
   display: inline-block;
   width: 47.5%;
+  opacity: 0;
+  vertical-align: top;
 }
 
-.repo-item:nth-child(2n-1) {
-  margin-right: 4%;
+.repo-item:nth-child(even) {
+  margin-right: 3%;
 }
 
 #title .card-title {
@@ -49,16 +66,28 @@ p {
 
 .user_info {
 	float: left;
-	margin-left: 10px
+	margin-left: 10px;
+  max-width:300px;
 }
 
 .card .card-content p.user_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+
 	font-size: 16px;
 	font-weight: bold;
 	color: #74C2CE;
+
 }
 
 .card .card-content p.update_info {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+
 	font-size: 16px;
 	margin-top: 5px;
 	color: color(black lightness(+46.7%));
@@ -78,8 +107,12 @@ p {
 }
 
 .repo_intro {
-	font-size: 14px
+  height: 50px;
+	font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 
 .chip-group {
 	margin-top: 15px;
