@@ -3,7 +3,7 @@
  */
 document.addEventListener('DOMContentLoaded', function () {
     $.ajax({
-        url: "http://localhost:3001/api/plugin/newtab",
+        url: "http://gitmining.net:40004/api/plugin/newtab",
         cache: false,
         type: "GET",
         dataType: "json"
