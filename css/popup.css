@@ -1,23 +1,62 @@
 ﻿body {
-	width: 320px;
+	width: 500px;
+	padding: 20px;
 }
-table {
-	border-collapse:collapse;
-	font-size: 0.85em;
+
+p {
+	margin: 0;
+	line-height: 120%;
+	word-wrap: break-word;
+	word-break: normal;
 }
-table,td {
-	border: 1px solid gray;
+
+#title .card-title {
+	line-height: 100%;
 }
-td{
-	padding: 4px;
-	text-overflow:ellipsis;
+
+#title .card-title {
+	color: #74C2CE;
 }
-td.item-name{
-	text-align: right;
+
+.card {
+	margin-bottom: 20px;
 }
-.content-div{
-	width:220px;
-	white-space:nowrap;
-	overflow-x:hidden;
-	text-overflow:ellipsis;
+
+.avatar {
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-radius: 30px;
+}
+
+.user_info {
+	float: left;
+	margin-left: 10px
+}
+
+.card .card-content p.user_name {
+	font-size: 16px;
+	font-weight: bold;
+	color: #74C2CE;
+}
+
+.card .card-content p.update_info {
+	font-size: 16px;
+	margin-top: 5px;
+	color: color(black lightness(+46.7%));
+}
+
+.github-icon {
+	position: relative;
+	top: 5px;
+	float: right;
+}
+
+.repo_intro {
+	font-size: 14px
+}
+
+.chip-group {
+	margin-top: 15px;
+	margin-bottom: 0;
 }
