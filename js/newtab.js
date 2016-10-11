@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(msg);
         var repo_data = msg;
         console.log(repo_data);
-        $('#repo-item-tmpl').tmpl({data: repo_data}).appendTo('#repo-item-group');
+        $('#repo-item-tmpl').tmpl({data: repo_data}).prependTo('#repo-item-group');
         Materialize.showStaggeredList('#repo-item-group');
     }).fail(function (jqXHR, textStatus) {
         console.log('fail');

@@ -1,13 +1,16 @@
-﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>
-			Blacklist Checking
-		</title>
-		<link rel="stylesheet" href="/css/font-icons.css">
-		<link rel="stylesheet" href="/css/materialize.css">
-		<link rel="stylesheet" type="text/css" href="/css/popup.css" />
-	</head>
+
+<head>
+	<title>
+		Blacklist Checking
+	</title>
+	<link rel="stylesheet" href="/css/font-icons.css">
+	<link rel="stylesheet" href="/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="/css/popup.css" />
+</head>
+
 <body>
 	<nav>
 		<div class="nav-wrapper">
@@ -17,29 +20,29 @@
 	</nav>
 	<div id="repo-item-group">
 		<script id="repo-item-tmpl" type="text/x-jquery-tmpl">
-		{{each(i,data) data}}
-		<div class="card repo-item">
-			<a class="card-link" target="_blank" href="https://github.com/${full_name}"></a>
-			<div class="card-content">
-				<div class="card-title row repo-title">
-					<img src="${avatarUrl}" alt="avatar" class="avatar">
-					<div class="user_info">
-						<p class="user_name">${full_name}</p>
-						<p class="update_info">Updated on ${update}</p>
+			{{each(i,data) data}}
+			<div class="card repo-item">
+				<a class="card-link" target="_blank" href="https://github.com/${full_name}"></a>
+				<div class="card-content">
+					<div class="card-title row repo-title">
+						<img src="${avatarUrl}" alt="avatar" class="avatar">
+						<div class="user_info">
+							<p class="user_name">${full_name}</p>
+							<p class="update_info">Updated on ${update}</p>
+						</div>
+						<a target="_blank" href="https://github.com/${full_name}" class="repo-link">
+							<i class="github-icon small muidocs-icon-custom-github"></i>
+						</a>
 					</div>
-					<a href="https://github.com/${full_name}" class="repo-link">
-						<i class="github-icon small muidocs-icon-custom-github"></i>
-					</a>
-				</div>
-				<p class="repo_intro">${description}</p>
-				<div class="chip-group row">
-				{{each(i,tag) tags}}
-	        <div class="chip col 3">${tag}</div>
-    		{{/each}}
+					<p class="repo_intro">${description}</p>
+					<div class="chip-group row">
+						{{each(i,tag) tags}}
+						<div class="chip col 3">${tag}</div>
+						{{/each}}
+					</div>
 				</div>
 			</div>
-		</div>
-		{{/each}}
+			{{/each}}
 		</script>
 	</div>
 </body>
@@ -47,4 +50,5 @@
 <script src="/js/materialize.js"></script>
 <script src="/js/jquery.tmpl.js"></script>
 <script src="/js/popup.js"></script>
+
 </html>

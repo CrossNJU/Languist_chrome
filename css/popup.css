@@ -1,138 +1,138 @@
-﻿body {
-	position: relative;
-	width: 500px;
-	padding: 80px 20px 20px;
-	background-color: #fafafa;}
+body {
+  position: relative;
+  width: 500px;
+  padding: 80px 20px 20px;
+  background-color: #fafafa;
+}
+
+a: {
+  outline: none;
+}
 
 p {
-	margin: 0;
-	line-height: 120%;
-	word-wrap: break-word;
-	word-break: normal;
+  margin: 0;
+  line-height: 120%;
+  word-wrap: break-word;
+  word-break: normal;
 }
 
 nav {
-	position: absolute;
-	top:0;
-	left: 0;
-	width: 100%;
-	height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 nav .nav-wrapper {
-	background-color:#74C2CE;
-	padding: 15px 20px;
+  background-color: #74C2CE;
+  padding: 15px 20px;
 }
 
 .nav-title {
-	font-size: 25px;
-	font-weight: 200;
+  font-size: 25px;
+  font-weight: 200;
 }
 
 p.subtitle {
-	font-size: 14px;
-	color: #F4FEFF;
+  font-size: 14px;
+  color: #F4FEFF;
 }
 
 p.subtitle a {
-	transition: all 0.2s;
-	color: inherit;
+  transition: all 0.2s;
+  color: inherit;
 }
 
 p.subtitle a:hover {
-	transition: all 0.2s;
-	outline: hidden;
+  transition: all 0.2s;
+  color: #F2DF83;
 }
 
 p.subtitle a:focus {
-	outline: hidden;
+  outline: hidden;
 }
 
-
 .card {
-	transition: all 0.2s;
-	position: relative;
-	margin-bottom: 20px;
+  transition: all 0.2s;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .card:hover {
-	transition: all 0.2s;
-	background-color: #F4FEFF;
-	box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+  transition: all 0.2s;
+  background-color: #F4FEFF;
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
 
 .card-link {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	opacity: 0;
-}
-
-
-#title .card-title {
-	line-height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
 }
 
 #title .card-title {
-	color: #74C2CE;
+  line-height: 100%;
+}
+
+#title .card-title {
+  color: #74C2CE;
 }
 
 .avatar {
-	float: left;
-	width: 40px;
-	height: 40px;
-	border-radius: 30px;
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
 }
 
 .user_info {
-	float: left;
-	margin-left: 10px;
-	max-width:300px;
+  float: left;
+  margin-left: 10px;
+  max-width: 300px;
 }
 
 .card .card-content p.user_name {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	max-width: 100%;
-
-	font-size: 16px;
-	font-weight: bold;
-	color: #74C2CE;
-
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #74C2CE;
 }
 
 .card .card-content p.update_info {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	max-width: 100%;
-
-	font-size: 16px;
-	margin-top: 5px;
-	color: color(black lightness(+46.7%));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  font-size: 16px;
+  margin-top: 5px;
+  color: color(black lightness(+46.7%));
 }
 
 .github-icon {
-	transition: all 0.2s;
-	position: relative;
-	top: 5px;
-	float: right;
-	color: lightgrey;
+  transition: all 0.2s;
+  position: relative;
+  top: 5px;
+  float: right;
+  color: lightgrey;
 }
 
 .github-icon:hover {
-	transition: all 0.2s;
-	color: #74C2CE;
+  transition: all 0.2s;
+  color: #74C2CE;
 }
 
 .repo_intro {
-	font-size: 14px
+  font-size: 14px
 }
 
 .chip-group {
-	margin-top: 15px;
-	margin-bottom: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
