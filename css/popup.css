@@ -29,13 +29,15 @@ nav .nav-wrapper {
   padding: 15px 20px;
 }
 
-.nav-title {
+.nav-title a {
+  transition: all 0.2s;
   font-size: 25px;
   font-weight: 200;
 }
 
 p.subtitle {
   font-size: 14px;
+  margin-top: 3px;
   color: #F4FEFF;
 }
 
@@ -44,7 +46,7 @@ p.subtitle a {
   color: inherit;
 }
 
-p.subtitle a:hover {
+p.subtitle a:hover,.nav-title a:hover {
   transition: all 0.2s;
   color: #F2DF83;
 }
